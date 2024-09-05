@@ -15,6 +15,10 @@ const Home: React.FC = () => {
     navigate(paths.login);
   };
 
+  const handleOpenContactForm = () => {
+    navigate(paths.contactForm);
+  };
+
   const handleOpenDashboard = async () => {
     setError(null);
 
@@ -59,7 +63,11 @@ const Home: React.FC = () => {
       )}
 
       <Button variant="contained" color="primary" onClick={handleOpenDashboard} sx={{ mb: 2 }}>
-        Open Dashboard
+        Dashboard
+      </Button>
+
+      <Button variant="contained" color="primary" onClick={handleOpenContactForm} sx={{ mb: 2 }}>
+        Contact Form
       </Button>
 
       <Button variant="contained" color="secondary" onClick={handleLogout}>
